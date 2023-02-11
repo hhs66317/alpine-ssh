@@ -1,0 +1,5 @@
+selectp -t 1         #选中第0个窗格
+splitw -v -p 15      #将右边那个分成上下两个
+selectp -t 1         #选中第一个
+splitw -h -p 50      #将其分成左右两个
+selectp -t 1         #选中第一个
