@@ -12,7 +12,7 @@ RUN echo "http://mirrors.aliyun.com/alpine/latest-stable/main/" > /etc/apk/repos
 
 # 更新源、安装openssh 并修改配置文件和生成key 并且同步时间
 RUN apk update && \
-    apk add --no-cache openssh-server tzdata tmux zsh vim && \
+    apk add --no-cache openssh-server tzdata tmux zsh vim htop && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && \
     ssh-keygen -t rsa -P "" -f /etc/ssh/ssh_host_rsa_key && \
