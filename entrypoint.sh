@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # 兼容zsh
 export DISABLE_AUTO_TITLE="true"
@@ -11,7 +11,7 @@ if [ $? = 0 ];then
     exit
 fi
 
-tmux new -d -s $session
+tmux -f /root/tmux.conf new -d -s $session
 
 tmux renamew -t $session:1 task
 tmux select-window -t $session:task
